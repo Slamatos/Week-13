@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Created by: Mason Morgan
+    Date: 1/10/22
+    Reason: CSC102
+    Contact: william.morgan.work@gmail.com
+    Important Source: W3Schools.com
+-->
+
+<head>
+    <script src="code.js"></script>
+    <!-- Head portion: used for behind the scenes-->
+    <link href="style2.css" rel="stylesheet">
+    <!--The style-->
+    <script src="classCode.js"></script>
+    <script src="launchDataDis.js"></script>
+    <script src="dataLoader.js"></script>
+    <script>
+        var theTime = new Date();
+        var tempTime = new Date();
+        var lastIteration = 0;
+        var time_interval = 5000;
+        var running = true;
+        var index = 0;
+        var timer;
+        var data = getData();
+        //gets data in the table ^
+    </script>
+    <title>
+        Mason Morgan's UATSpace Page
+    </title>
+</head>
+
+<body style="color:white" style="font-size: larger;">
+    <table>
+        <td>
+            <img src="UATspaceLogo-1.png">
+        </td>
+        <td>
+            <h1 style="color:white";>
+                UAT Space Program
+            </h1>
+
+        </td>
+    </table>
+    <table id="data" border="2" width="50%">
+        <col style="width: 35%" style="color:white">
+        <col style="width: 35%" style="color:white">
+        <thead style="color:white">
+            <th style="background: rgba(0, 0, 0, 0.250);">
+                Data type
+            </th>
+            <th style="background: rgba(0, 0, 0, 0.250);">
+                Reading
+            </th>
+        </thead>
+        <tbody style="color:white">
+            <tr id="seconds" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="lattitude" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="longitude" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="gps_alt" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="bmp_alt" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="bmp_prs" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="bmp_temp" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="dig_temp" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="css_temp" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="css_eCO2" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="css_TVOC" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="UV" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="accelX" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="accelY" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="accelZ" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="magneticX" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="magneticY" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="magneticZ" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="gyroX" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="gyroY" style="background: rgba(0, 0, 0, 0.250);"></tr>
+            <tr id="gyroZ" style="background: rgba(0, 0, 0, 0.250);"></tr>
+        </tbody>
+    </table>
+  The time is: <div id="timeStamp">Press start for current time</div>
+    <button id="startButton" onclick="start();">
+        Start
+    </button>
+
+    <button id="stopButton" onclick="stop()" ;>
+        Stop
+    </button>
+    <br>
+    <br>
+    <button onclick="playMissionLaunch()">Mission Music!</button>
+
+    <br>
+    <br>
+    <script>
+        var springLaunch = new Mission("To go boldly...", 19, "25 of May 2023", "Amanozako", 3)
+        var fallLaunch = new Mission("To go once more...", 25, "13 of November 2022", "Demeter", 2)
+    </script>
+    <button onclick="runSpDisplay()">Spring Misson Parameters</button>
+    <button onclick="spLaunch()">Start Spring Launch</button>
+    <button onclick="runFlDisplay()">Fall Misson Parameters</button>
+    <button onclick="flLaunch()">Start Fall Launch</button>
+    <br>
+    <br>
+        <!--This section is used to show the users results in the function "playCraps"-->
+        <button onclick="playCraps()" ;> <!-- add music here too-->
+            Craps
+        </button>
+    <div id="die1Res" ; Die 1 results></div>
+    <!--This section is used to show the result of the first die in the function "playCraps"-->
+    <div id="die1evenCheck" ; Die 1 even check></div>
+    <!--This section is used to show if the first die in the function "playCraps" is even-->
+    <div id="die2Res" ; Die 2 results></div>
+    <!--This section is used to show the result of the second die in the function "playCraps"-->
+    <div id="die2evenCheck" ; Die 2 even check></div>
+    <!--This section is used to show if the second die in the function "playCraps" is even-->
+    <div id="fullRes" ; Results></div>
+    <!--This section is used to show if the dice total in the function "playCraps"-->
+    <div id="crapsRes" ; Results></div>
+    <!--This section is used to show the users results in the function "playCraps"-->
+</body>
+<!-- Add sound to folders -->
+</html>
